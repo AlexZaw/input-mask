@@ -19,7 +19,7 @@ const maskInput = (evt) => {
             input.value = prefix;
         }
     }
-    if (input.value.slice(0, prefix.length) === prefix) {
+    if (prefix && prefix === input.value.slice(0, prefix.length)) {
         value = input.value.replace(prefix, "").replace(/[^\d]/g, "");
     } else {
         value = input.value.replace(/[^\d]/g, "");
